@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fund Me App</title>
+  <style>
+    /* Basic styling for better presentation */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f4f4f4;
+    }
+    button {
+      margin: 5px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      background-color: #4caf50;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    label {
+      margin-top: 10px;
+      display: block;
+      font-weight: bold;
+    }
+    input {
+      margin-top: 5px;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    .section {
+      margin-bottom: 20px;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    }
+    h2 {
+      margin-top: 0;
+      color: #333;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    li {
+      margin-bottom: 10px;
+    }
+    #campaignsList li {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <button id="connectButton">Connect</button>
+  
+  <div class="section">
+    <h2>Create Campaign</h2>
+    <label for="campaignTitle">Campaign Title</label>
+    <input id="campaignTitle" placeholder="Enter title" type="text"/>
+    <label for="campaignDescription">Campaign Description</label>
+    <input id="campaignDescription" placeholder="Enter description" type="text"/>
+    <label for="campaignTarget">Target Amount (ETH)</label>
+    <input id="campaignTarget" placeholder="Enter target amount" type="number"/>
+    <label for="campaignDurationHours">Campaign Duration (Hours)</label>
+    <input id="campaignDurationHours" placeholder="Enter duration in hours" type="number"/>    
+    <label for="campaignImage">Campaign Image URL</label>
+    <input id="campaignImage" placeholder="Enter image URL" type="text"/>
+    <button id="createCampaignButton">Create Campaign</button>
+  </div>
+
+  <div class="section">
+    <h2>Make Donation</h2>
+    <label for="donationCampaignID">Campaign ID</label>
+    <input id="donationCampaignID" placeholder="Enter campaign ID" type="number"/>
+    <label for="donationAmount">Donation Amount (ETH)</label>
+    <input id="donationAmount" placeholder="Enter donation amount" type="number"/>
+    <button id="donateButton">Donate</button>
+  </div>
+
+  <div class="section">
+    <h2>Current Campaigns</h2>
+    <ul id="campaignsList"></ul>
+    <button id="getCurrentCampaignsButton">Get Current Campaigns</button>
+  </div>
+</body>
+<script src="./index.js" type="module"></script>
+</html>
